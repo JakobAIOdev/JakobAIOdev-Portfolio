@@ -4,6 +4,10 @@
     box-sizing: border-box;
 }
 
+body {
+    transition: background-color 0.5s ease, color 0.5s ease;
+}
+
 h1 {
     font-size: 5rem;
     font-family: "Roboto", sans-serif;
@@ -13,6 +17,7 @@ h1 {
     background-clip: text;
     -webkit-background-clip: text;
     color: transparent;
+    transition: background 0.5s ease;
 }
 
 @keyframes gradient-animation {
@@ -112,12 +117,13 @@ ul li {
 }
 
 .terminal-input::placeholder {
-    color: #555; /* Add placeholder color */
+    color: #555;
     opacity: 0.5;
 }
 
 body.dark-mode {
     background-color: #1C1C2B;
+    transition: background-color 0.5s ease, color 0.5s ease;
 }
 
 h1.dark-mode {
@@ -125,13 +131,14 @@ h1.dark-mode {
     background-clip: text;
     -webkit-background-clip: text;
     color: transparent;
+    transition: background 0.5s ease;
 }
 
 .dark-mode .terminal {
     background-color: #2d2d2d;
     box-shadow: none; /* Remove shadow in dark mode */
+    border: 1px solid #444; /* Add stroke around terminal in dark mode */
 }
-
 
 .dark-mode .terminal-input {
     color: #eaeaea;
@@ -159,8 +166,8 @@ h1.dark-mode {
     cursor: pointer;
     background-color: #ccc;
     border-radius: 15px;
-    width: 3rem; /* Adjust width */
-    height: 1.5rem; /* Adjust height */
+    width: 3rem;
+    height: 1.5rem;
     position: relative;
     transition: background-color 0.3s ease;
 }
@@ -185,5 +192,190 @@ h1.dark-mode {
     transform: translateX(1.5rem);
 }
 
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 2rem;
+}
 
+.social-links a {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    position: relative;
+    transition: transform 0.3s ease;
+}
+
+.social-links a:hover {
+    transform: scale(1.1);
+}
+
+.social-links img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.social-links .light-icon {
+    display: none;
+}
+
+body.dark-mode .social-links .dark-icon {
+    display: none;
+}
+
+body.dark-mode .social-links .light-icon {
+    display: block;
+}
+
+body.dark-mode .social-links a {
+    color: #7C52E5;
+}
+
+body.dark-mode .social-links a:hover {
+    color: #E93D83;
+}
+
+.contact-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60vh;
+}
+
+.contact-card {
+    background-color: #f0f0f0;
+    padding: 2rem;
+    border-radius: 10px;
+    text-align: center;
+    width: 80%;
+    max-width: 500px;
+}
+
+.contact-card h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: #1E1E1E;
+}
+
+.contact-card a {
+    display: block;
+    margin: 0.5rem 0;
+    color: #176ACF;
+    text-decoration: none;
+    font-size: 1.2rem;
+    transition: color 0.3s ease;
+}
+
+.contact-card a:hover {
+    color: #26C8F3;
+}
+
+body.dark-mode .contact-card {
+    background-color: #1E1E1E;
+}
+
+body.dark-mode .contact-card h2 {
+    color: #eaeaea;
+}
+
+body.dark-mode .contact-card a {
+    color: #7C52E5;
+}
+
+body.dark-mode .contact-card a:hover {
+    color: #E93D83;
+}
+
+.finder {
+    width: 80%;
+    max-width: 800px;
+    margin: 2rem auto;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.4), 0 4px 8px rgba(0, 0, 0, 0.5);
+    background-color: #1e1e1e;
+    color: #eaeaea;
+    font-family: "Menlo", "Monaco", "Courier New", Courier, monospace;
+}
+
+.finder-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    background-color: #2d2d2d;
+}
+
+.finder-path {
+    font-size: 1rem;
+    color: #eaeaea;
+}
+
+.return-button {
+    background: none;
+    border: none;
+    color: #eaeaea;
+    cursor: pointer;
+    font-size: 1rem;
+    padding: 0.5rem;
+}
+
+.return-button:hover {
+    text-decoration: underline;
+}
+
+.finder-body {
+    padding: 1rem;
+    background-color: #1e1e1e;
+    height: 20rem;
+}
+
+.finder-content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.file, .folder {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+    width: 80px;
+    text-align: center;
+}
+
+.file img, .folder img {
+    width: 48px;
+    height: 48px;
+    margin-bottom: 0.5rem;
+}
+
+.file span, .folder span {
+    font-size: 1rem;
+}
+
+body.dark-mode .finder {
+    background-color: #1e1e1e;
+    box-shadow: none; /* Remove shadow in dark mode */
+    border: 1px solid #444; /* Add stroke around Finder in dark mode */
+}
+
+body.dark-mode .finder-header {
+    background-color: #2d2d2d;
+}
+
+body.dark-mode .finder-path {
+    color: #eaeaea;
+}
+
+body.dark-mode .finder-body {
+    background-color: #1e1e1e;
+}
 

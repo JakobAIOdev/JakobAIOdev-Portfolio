@@ -17,4 +17,7 @@ document.addEventListener('DOMContentLoaded', () => {
             localStorage.setItem('darkMode', 'disabled');
         }
     });
+
+    document.body.style.transition = 'background-color 0.5s ease';
+    document.querySelector('h1').style.transition = 'color 0.5s ease';
 });

@@ -1,6 +1,10 @@
 document.addEventListener('DOMContentLoaded', () => {
     const terminalInput = document.getElementById('terminal-input');
     const terminalContent = document.getElementById('terminal-content');
+    const terminalSection = document.getElementById('terminal-section');
+    const finderSection = document.getElementById('finder-section');
+    const projectsFinderSection = document.getElementById('projects-finder-section');
+    const contactFinderSection = document.getElementById('contact-finder-section');
 
     terminalInput.addEventListener('keydown', (event) => {
         if (event.key === 'Enter') {
@@ -22,8 +26,15 @@ document.addEventListener('DOMContentLoaded', () => {
             terminalContent.appendChild(list);
         } else if (command.startsWith('cd ')) {
             const dir = command.split(' ')[1];
-            if (['about', 'projects', 'contact'].includes(dir)) {
-                window.location.href = `${dir}.html`;
+            if (dir === 'about') {
+                terminalSection.style.display = 'none';
+                finderSection.style.display = 'block';
+            } else if (dir === 'projects') {
+                terminalSection.style.display = 'none';
+                projectsFinderSection.style.display = 'block';
+            } else if (dir === 'contact') {
+                terminalSection.style.display = 'none';
+                contactFinderSection.style.display = 'block';
             } else {
                 const error = document.createElement('p');
                 error.textContent = `bash: cd: ${dir}: No such file or directory`;
