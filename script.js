@@ -14,6 +14,10 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
+    terminalSection.addEventListener('click', () => {
+        terminalInput.focus();
+    });
+
     function handleCommand(command) {
         const output = document.createElement('p');
         output.textContent = `jakob@home:~$ ${command}`;

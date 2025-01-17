@@ -84,14 +84,17 @@ p {
 
 .terminal-body p {
     margin-bottom: 0.5rem;
-    font-size: 1.1rem; 
+    margin-top: 0.5rem;
+    font-size: 1rem;
+    font-family: "Nanum Gothic Coding", monospace;
 }
 
 #terminal-first-input {
     display: flex;
     align-items: center;
     font-family: "Nanum Gothic Coding", monospace;
-    font-size: 1.1rem; 
+    font-size: 1rem;
+    margin-top: 0;
 }
 
 ul {
@@ -102,11 +105,13 @@ ul li {
     display: flex;
     align-items: center;
     font-family: "Nanum Gothic Coding", monospace;
-    font-size: 1.1rem; 
+    font-size: 1.1rem;
+    margin-bottom: 0.25rem;
 }
 
 .terminal-input {
     width: 100%;
+    height: 2rem;
     border: none;
     background: none;
     color: #ffff; /* Change input text color to green */
@@ -114,11 +119,13 @@ ul li {
     font-size: 1rem;
     outline: none;
     caret-color: #ffff; /* Change caret color to green */
+    padding: 0; 
 }
 
 .terminal-input::placeholder {
     color: #555;
     opacity: 0.5;
+    line-height: 2rem; /* Adjust line-height to vertically center the placeholder text */
 }
 
 body.dark-mode {
@@ -143,11 +150,6 @@ h1.dark-mode {
 .dark-mode .terminal-input {
     color: #eaeaea;
     caret-color: #eaeaea;
-}
-
-.dark-mode .terminal-body p,
-.dark-mode ul li {
-    color: #eaeaea;
 }
 
 .switch {
