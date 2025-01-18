@@ -76,17 +76,19 @@ document.addEventListener('DOMContentLoaded', () => {
                     <img src="icons/aws.svg" alt="AWS">
                     <span>AWS</span>
                 </div>
+                <div class="file" onclick="openFile('figma')">
+                    <img src="icons/figma.svg" alt="Figma">
+                    <span>Figma</span>
+                </div>
             `;
             currentPath.push('tools');
             updatePath();
-        } else if (folderName === 'project1' || folderName === 'project2' || folderName === 'project3') {
-            finderContent.innerHTML = `
-                <div class="file-content">
-                    <p>Details about ${folderName}</p>
-                </div>
-            `;
-            currentPath.push(folderName);
-            updatePath();
+        } else if (folderName === 'project1') {
+            window.open('https://github.com/JakobAIOdev/Sneaker-Price-Scraper-Discord-Csharp', '_blank');
+        } else if (folderName === 'project2') {
+            window.open('https://github.com/JakobAIOdev/Sneaker-Scraper-Discord', '_blank');
+        } else if (folderName === 'project3') {
+            window.open('https://github.com/JakobAIOdev/JakobAIOdev-Portfolio', '_blank');
         }
     };
 

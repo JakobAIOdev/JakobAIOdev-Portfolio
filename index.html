@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="styles.css">
+    <link rel="stylesheet" type="text/css" href="mobile.css">
     <link rel="stylesheet" href="/fonts.css">
     <title>JakobAIO</title>
 </head>
@@ -12,6 +13,7 @@
         <input type="checkbox" id="dark-mode-toggle">
         <label for="dark-mode-toggle"></label>
     </div>
+    <button id="easy-mode-toggle" class="easy-mode-button">Easy Mode</button>
     <h1>JakobAIO</h1>
     <p>Transforming ideas into powerful tools</p>
     
@@ -74,15 +76,15 @@
             <div class="finder-content" id="projects-finder-content">
                 <div class="folder" onclick="openFolder('project1')">
                     <img src="icons/folder-icon.png" alt="Folder">
-                    <span>Sneaker Scraper</span>
+                    <span>Sneaker Scraper [C#]</span>
                 </div>
                 <div class="folder" onclick="openFolder('project2')">
                     <img src="icons/folder-icon.png" alt="Folder">
-                    <span>Project 2</span>
+                    <span>Sneaker Scraper [Python]</span>
                 </div>
                 <div class="folder" onclick="openFolder('project3')">
                     <img src="icons/folder-icon.png" alt="Folder">
-                    <span>Project 3</span>
+                    <span>Portfolio Website</span>
                 </div>
             </div>
         </div>
@@ -127,5 +129,6 @@
     <script src="script.js" defer></script>
     <script src="dark-mode.js" defer></script>
     <script src="finder.js" defer></script>
+    <script src="easy-mode.js" defer></script>
 </body>
 </html>

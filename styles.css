@@ -348,9 +348,9 @@ body.dark-mode .contact-card a:hover {
     display: flex;
     flex-direction: column;
     align-items: center;
-    cursor: pointer;
     width: 80px;
     text-align: center;
+    cursor: pointer;
 }
 
 .file img, .folder img {
@@ -379,5 +379,42 @@ body.dark-mode .finder-path {
 
 body.dark-mode .finder-body {
     background-color: #1e1e1e;
+}
+
+.easy-mode-button {
+    position: absolute;
+    top: 1rem;
+    right: 5rem;
+    background-color: #176ACF;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.easy-mode-button:hover {
+    background-color: #26C8F3;
+}
+
+.easy-mode-button.active {
+    background-color: #555;
+}
+
+body.dark-mode .easy-mode-button {
+    background-color: #E93D83;
+}
+
+body.dark-mode .easy-mode-button.active {
+    background-color: #555;
+}
+
+.easy-mode-message {
+    color: #26C8F3;
+}
+
+body.dark-mode .easy-mode-message {
+    color: #E93D83;
 }
 

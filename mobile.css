@@ -1,0 +1,17 @@
+@media(max-width:768px){
+    h1 {
+        font-size: 4rem;
+    }
+
+    .terminal-body {
+        height: 15rem;
+    }
+
+    .finder-body {
+        overflow-y: scroll;
+    }
+
+    .file span, .folder span {
+        font-size: 0.8rem;
+    }
+}
