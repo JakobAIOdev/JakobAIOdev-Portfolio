@@ -14,6 +14,7 @@
         <label for="dark-mode-toggle"></label>
     </div>
     <button id="easy-mode-toggle" class="easy-mode-button">Easy Mode</button>
+    <button id="help-button" class="help-button">?</button>
     <h1>JakobAIO</h1>
     <p>Transforming ideas into powerful tools</p>
     
@@ -126,9 +127,27 @@
         </div>
     </section>
 
+    <!-- Help Popup -->
+    <div id="help-popup-overlay" class="help-popup-overlay" style="display: none;">
+        <div id="help-popup" class="help-popup">
+            <div class="help-popup-content">
+                <span class="close-button" id="close-help-popup">&times;</span>
+                <h2 id="help-heading">How to Use This Site</h2>
+                <p>Welcome to JakobAIO's portfolio site! Here's how you can navigate and use the site:</p>
+                <ul>
+                    <li><span class="help-points"><strong>Terminal Commands:</strong></span><br> Type commands in the terminal to navigate. For example, type "cd about" to view the about section.</li>
+                    <li><span class="help-points"><strong>Easy Mode:</strong></span><br>  Click the "Easy Mode" button to disable terminal input and navigate using clicks.</li>
+                    <li><span class="help-points"><strong>Sections:</strong></span><br>  Click on "about", "projects", or "contact" to view the respective sections.</li>
+                    <li><span class="help-points"><strong>Dark Mode:</strong></span><br> Use the toggle switch in the top right corner to switch between light and dark modes.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
     <script src="script.js" defer></script>
     <script src="dark-mode.js" defer></script>
     <script src="finder.js" defer></script>
     <script src="easy-mode.js" defer></script>
+    <script src="help.js" defer></script>
 </body>
 </html>

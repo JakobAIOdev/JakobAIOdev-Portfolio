@@ -22,9 +22,38 @@
     }
     
     #about-heading {
-        font-size: 2rem;
+        font-size: 1rem;
         padding-bottom: 0.5rem;
         text-align: center;
         color: #D3D3D3;
+    }
+
+    .help-heading {
+        font-size: 1.2rem;
+    }
+
+    #close-help-popup {
+        font-size: 1.75rem;
+        top: 0.5rem;
+        right: 0.5rem;
+    }
+
+    .help-popup {
+        width: 90%;
+        max-width: 90%;
+        padding: 1rem;
+    }
+
+    .help-popup-content {
+        padding: 1rem;
+    }
+
+    .help-popup-content ul {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+
+    .help-popup-content ul li {
+        font-size: 0.9rem;
     }
 }
