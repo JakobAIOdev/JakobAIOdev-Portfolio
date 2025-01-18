@@ -1,6 +1,7 @@
 @media(max-width:768px){
     h1 {
         font-size: 4rem;
+        margin-top: 9rem;
     }
 
     .terminal-body {
@@ -13,5 +14,17 @@
 
     .file span, .folder span {
         font-size: 0.8rem;
+    }
+
+    .file-content {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+    
+    #about-heading {
+        font-size: 2rem;
+        padding-bottom: 0.5rem;
+        text-align: center;
+        color: #D3D3D3;
     }
 }

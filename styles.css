@@ -194,6 +194,18 @@ h1.dark-mode {
     transform: translateX(1.5rem);
 }
 
+.file-content {
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+}
+
+#about-heading {
+    font-size: 2rem;
+    padding-bottom: 0.5rem;
+    text-align: center;
+    color: #ccc;
+}
+
 .social-links {
     display: flex;
     justify-content: center;

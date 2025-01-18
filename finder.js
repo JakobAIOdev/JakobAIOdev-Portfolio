@@ -5,13 +5,18 @@ document.addEventListener('DOMContentLoaded', () => {
     const finderSection = document.getElementById('finder-section');
     const projectsFinderSection = document.getElementById('projects-finder-section');
     const contactFinderSection = document.getElementById('contact-finder-section');
+    const terminalInput = document.getElementById('terminal-input');
+    const terminalContent = document.getElementById('terminal-content');
     let currentPath = ['About'];
 
     window.openFile = (fileName) => {
         if (fileName === 'about.txt') {
             finderContent.innerHTML = `
                 <div class="file-content">
-                    <p>Hi, I'm Jakob. I have a deep passion for web scraping and web automation. Over the years, I have built numerous sneaker bots and scrapers, leveraging my skills to create powerful tools that automate complex tasks. My journey in web development has equipped me with a strong foundation in various programming languages and technologies.</p>
+                    <p id="about-heading">Hi, I'm JakobAIO,</p>
+                    <p>a web developer focused on transforming ideas into powerful tools.
+                    I specialize in web automation, creating efficient web scrapers and sneaker bots. These projects taught me to optimize performance, work with APIs, and navigate complex websites.
+                    I'm passionate about solving challenges, streamlining workflows, and crafting dynamic, user-friendly tools. </p>
                 </div>
             `;
             currentPath.push('about.txt');

@@ -91,7 +91,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     // Activate easy mode by default if the user opens the site on a phone
-    if (window.innerWidth <= 768) {
+    if (/Mobi|Android/i.test(navigator.userAgent)) {
         activateEasyMode();
     }
 });
