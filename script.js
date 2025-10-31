@@ -17,7 +17,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 },
                 projects: {
                     type: 'dir',
-                    children: {
+                    children: {'MusicMatch': { type: 'link', url: 'https://github.com/JakobAIOdev/MusicMatch' },
                         'Sneaker-Scraper-C#': { type: 'link', url: 'https://github.com/JakobAIOdev/Sneaker-Price-Scraper-Discord-Csharp' },
                         'Sneaker-Scraper-Python': { type: 'link', url: 'https://github.com/JakobAIOdev/Sneaker-Scraper-Discord' },
                         'Portfolio-Website': { type: 'link', url: 'https://github.com/JakobAIOdev/JakobAIOdev-Portfolio' }
