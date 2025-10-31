@@ -4,7 +4,7 @@ Welcome to my terminal-inspired portfolio! 🚀
 
 This project combines creativity and interactivity, offering a unique way to explore my portfolio through a fully functional terminal interface with click-based navigation support.
 
-![Portfolio Screenshot](https://github.com/user-attachments/assets/1fc2a3c4-c34b-4e16-a785-2581a43a47b3)
+![Portfolio Screenshot](https://github.com/user-attachments/assets/1541f52a-ffa9-47e4-824c-99f5c8e580a4)
 
 ---
 
