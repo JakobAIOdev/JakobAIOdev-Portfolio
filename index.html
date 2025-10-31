@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="styles.css">
-    <link rel="stylesheet" type="text/css" href="mobile.css">
     <link rel="stylesheet" href="/fonts.css">
+    <link rel="icon" type="image/svg+xml" href="./icons/favicon.svg">
     <title>JakobAIO</title>
 </head>
 <body>
@@ -13,7 +13,6 @@
         <input type="checkbox" id="dark-mode-toggle">
         <label for="dark-mode-toggle"></label>
     </div>
-    <button id="easy-mode-toggle" class="easy-mode-button">Easy Mode</button>
     <button id="help-button" class="help-button">?</button>
     <h1>JakobAIO</h1>
     <p>Transforming ideas into powerful tools</p>
@@ -25,105 +24,13 @@
                 <span class="circle yellow"></span>
                 <span class="circle green"></span>
             </div>
+            <button id="back-button" class="back-button" title="Go back">←</button>
         </div>
         <div class="terminal-body">
             <div class="terminal-content" id="terminal-content">
-                <p id="terminal-first-input">jakob@home:~$ ls</p>
-                <ul>
-                    <li>about</li>
-                    <li>projects</li>
-                    <li>contact</li>
-                </ul>
+                <!-- Terminal output will be rendered here -->
             </div>
             <input type="text" id="terminal-input" class="terminal-input" placeholder="Type a command..." autofocus>
-        </div>
-    </section>
-
-    <section class="finder" id="finder-section" style="display: none;">
-        <div class="finder-header">
-            <div class="buttons">
-                <span class="circle red"></span>
-                <span class="circle yellow"></span>
-                <span class="circle green"></span>
-            </div>
-            <div class="finder-path" id="finder-path">About</div>
-            <button class="return-button" onclick="goBack()">Return</button>
-        </div>
-        <div class="finder-body" id="finder-body">
-            <div class="finder-content" id="finder-content">
-                <div class="file" onclick="openFile('about.txt')">
-                    <img src="./icons/about-txt-icon.png" alt="File">
-                    <span>about.txt</span>
-                </div>
-                <div class="folder" onclick="openFolder('tools')">
-                    <img src="icons/folder-icon.png" alt="Folder">
-                    <span>tools</span>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="finder" id="projects-finder-section" style="display: none;">
-        <div class="finder-header">
-            <div class="buttons">
-                <span class="circle red"></span>
-                <span class="circle yellow"></span>
-                <span class="circle green"></span>
-            </div>
-            <div class="finder-path" id="projects-finder-path">Projects</div>
-            <button class="return-button" onclick="goBack()">Return</button>
-        </div>
-        <div class="finder-body" id="projects-finder-body">
-            <div class="finder-content" id="projects-finder-content">
-                <div class="folder" onclick="openFolder('project1')">
-                    <img src="icons/folder-icon.png" alt="Folder">
-                    <span>Sneaker Scraper [C#]</span>
-                </div>
-                <div class="folder" onclick="openFolder('project2')">
-                    <img src="icons/folder-icon.png" alt="Folder">
-                    <span>Sneaker Scraper [Python]</span>
-                </div>
-                <div class="folder" onclick="openFolder('project3')">
-                    <img src="icons/folder-icon.png" alt="Folder">
-                    <span>Portfolio Website</span>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="finder" id="contact-finder-section" style="display: none;">
-        <div class="finder-header">
-            <div class="buttons">
-                <span class="circle red"></span>
-                <span class="circle yellow"></span>
-                <span class="circle green"></span>
-            </div>
-            <div class="finder-path" id="contact-finder-path">Contact</div>
-            <button class="return-button" onclick="goBack()">Return</button>
-        </div>
-        <div class="finder-body" id="contact-finder-body">
-            <div class="finder-content" id="contact-finder-content">
-                <div class="file" onclick="openFile('github')">
-                    <img src="icons/github-icon-light.svg" alt="GitHub">
-                    <span>GitHub</span>
-                </div>
-                <div class="file" onclick="openFile('instagram')">
-                    <img src="icons/instagram.svg" alt="Instagram">
-                    <span>Instagram</span>
-                </div>
-                <div class="file" onclick="openFile('email')">
-                    <img src="icons/gmail.svg" alt="Email">
-                    <span>Email</span>
-                </div>
-                <div class="file" onclick="openFile('linkedin')">
-                    <img src="icons/linkedin.svg" alt="LinkedIn">
-                    <span>LinkedIn</span>
-                </div>
-                <div class="file" onclick="openFile('X')">
-                    <img src="icons/x.svg" alt="X">
-                    <span>X</span>
-                </div>
-            </div>
         </div>
     </section>
 
@@ -135,10 +42,7 @@
                 <h2 id="help-heading">How to Use This Site</h2>
                 <p>Welcome to JakobAIO's portfolio site! Here's how you can navigate and use the site:</p>
                 <ul>
-                    <li><span class="help-points"><strong>Terminal Commands:</strong></span><br> Type commands in the terminal to navigate. For example, type "cd about" to view the about section.</li>
-                    <li><span class="help-points"><strong>Easy Mode:</strong></span><br>  Click the "Easy Mode" button to disable terminal input and navigate using clicks.</li>
-                    <li><span class="help-points"><strong>Sections:</strong></span><br>  Click on "about", "projects", or "contact" to view the respective sections.</li>
-                    <li><span class="help-points"><strong>Dark Mode:</strong></span><br> Use the toggle switch in the top right corner to switch between light and dark modes.</li>
+                    <!-- Dynamically populated by help.js -->
                 </ul>
             </div>
         </div>
@@ -146,7 +50,6 @@
 
     <script src="script.js" defer></script>
     <script src="dark-mode.js" defer></script>
-    <script src="finder.js" defer></script>
     <script src="easy-mode.js" defer></script>
     <script src="help.js" defer></script>
 </body>
